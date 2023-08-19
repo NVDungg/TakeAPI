@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <a href="@Url.Action("GetVillas", "Villa")" class="btn btn-primary">Go to Villas</a>
+    <a href="@Url.Action("CreateFormVilla", "Villa")" class="btn btn-primary">Create Villas</a>
+    <div id="villasListContainer"></div>
+
+    <script src="~/js/site.js"></script>
+</div>

@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <h1>Villa List</h1>
+<form id="villa-form"  method="POST">
+        <input type="text" id="add-name" placeholder="Villa Name">
+        <input type="text" id="add-sqft" placeholder="Square Feet">
+        <input type="text" id="add-occupancy" placeholder="Occupancy">
+        <input class="btn btn-primary" type="submit" value="Add">
+</form>
+
+<div id="editForm" style="display:none">
+    <h3>Edit</h3>
+    <form >
+        <input type="hidden" id="edit-id">
+        <input type="text" id="edit-name">
+        <input type="number" id="edit-sqft">
+        <input type="number" id="edit-occupancy">
+        <input type="submit" value="Save">
+    </form>
+</div>
+
+    <div class="container">
+        <table class="table table-dark table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Square Feet</th>
+                    <th>Occupancy</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody class="table-dark" id="villasTableBody">
+          
+            </tbody>
+        </table>
+    </div>
+

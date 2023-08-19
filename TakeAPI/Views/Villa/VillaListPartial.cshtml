@@ -1,0 +1,53 @@
+﻿@model List<VillaModel>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <h1>Villa CRUD</h1>
+    <h3>Add</h3>
+    <form action="javascript:void(0);" method="POST" onsubmit="CreateVilla()">
+        <input type="text" id="add-name" placeholder="Villa Name">
+        <input type="text" id="add-sqft" placeholder="Square Feet">
+        <input type="text" id="add-occupancy" placeholder="Occupancy">
+        <input class="btn btn-primary" type="submit" value="Add">
+    </form>
+
+    <div id="editForm">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateVilla()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="number" id="edit-sqft">
+            <input type="number" id="edit-occupancy">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <div id="editForm">
+        <h3>Edit</h3>
+        <form action="javascript:void(0);" onsubmit="updateVilla()">
+            <input type="hidden" id="edit-id">
+            <input type="text" id="edit-name">
+            <input type="number" id="edit-sqft">
+            <input type="number" id="edit-occupancy">
+            <input type="submit" value="Save">
+            <a onclick="closeInput()" aria-label="Close">&#10006;</a>
+        </form>
+    </div>
+
+    <div class="container">
+        <table class="table table-dark table-striped">
+            <thead class="table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Square Feet</th>
+                    <th>Occupancy</th>
+                </tr>
+            </thead>
+            <tbody class="table-dark" id="villasTableBody">
+                
+            </tbody>
+        </table>
+    </div>
